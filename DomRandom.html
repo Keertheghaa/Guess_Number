@@ -1,0 +1,59 @@
+<h1>
+    Guess the number from 1 to 10 !
+</h1>
+<label>Enter number : </label> <br>
+<br>
+<input id="one" type=number placeholder="Number" value="number">
+<br>
+<br>
+<button onclick="change()"> check </button>
+<p id="two">You are wrong/right</p>
+<p id="three">Score: 10</p>
+<script>
+    //select input
+    var a = document.getElementById("one");
+    //select para
+    var b = document.getElementById("two");
+    var randomNumber=Math.floor(Math.random()*10)+1;
+    var score=document.getElementById("three");
+    var tscore=10
+    function change(){
+    
+        var enterednumber=a.value
+        if(randomNumber == enterednumber){
+            console.log("Right");
+            b.textContent="Right";
+           // document.write("Right");
+           alert("You won../////");
+        }
+        else{
+           console.log("Wrong");
+            b.textContent="Wrong"; //samepage
+          //  document.write("Wrong"); //nextpage
+          tscore=tscore-1;
+          score.textContent="score:" +tscore;
+        }
+
+    }
+</script>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        background-color: #222;
+        color: white;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 18px;
+        width: 120px;
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>

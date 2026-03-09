@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Login Page</title>
+    </head>
+    <body>
+        <div class="login-box">
+            <h1>LOGIN</h1>
+            NAME : 
+            <input id="name" type="text" placeholder="NAME">
+            <br>
+            <br>
+            YOUR LOGIN PASSWORD :
+            <input id="pw" type="password" placeholder="PASSWORD">
+            <br>
+            <br>
+            <button onclick="cli()">LOGIN</button>
+        </div>
+    <script>
+        function cli(){
+            var username=document.getElementById("name").value;
+            var password=document.getElementById("pw").value;
+            if(username=="admin" && password=="1234"){
+                alert("LOGIN SUCCESSFULL");
+                window.location.href="DomRandom.html";
+            }
+           else {
+               alert("INVALID LOGIN");
+           }
+        }
+    </script>
+    </body>
+    <style>
+        
+
+body{
+    background-color:#222;
+    font-family:Arial;
+    color:white;
+    text-align:center;
+}
+
+.login-box{
+    width:300px;
+    margin:auto;
+    margin-top:150px;
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:10px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+}
+
+button{
+    padding:10px 20px;
+    background:blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+
+
+
+    </style>
+</html>
+
